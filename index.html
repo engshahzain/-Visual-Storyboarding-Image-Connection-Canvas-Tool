@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reel Mind — visual story canvas</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<aside id="side">
+  <div class="brand">Reel Mind</div>
+  <div class="sec">Projects</div>
+  <div id="plist"></div>
+  <div class="row"><button id="pNew">New</button><button id="pRen">Rename</button><button id="pDup">Duplicate</button><button id="pDel">Delete</button></div>
+  <div class="sec">Images</div>
+  <button id="upBtn" class="primary">Upload images…</button>
+  <input id="file" type="file" accept="image/*" multiple hidden>
+  <input id="search" placeholder="Search notes, tags, shot type…">
+  <div id="lib"></div>
+</aside>
+<header id="top">
+  <span id="pname"></span>
+  <button id="bUndo" title="Ctrl+Z">Undo</button><button id="bRedo" title="Ctrl+Shift+Z">Redo</button>
+  <span class="sp"></span>
+  <button id="bFit">Fit all</button><button id="b100">100%</button><span id="zoom">100%</span>
+  <input type="color" id="col" value="#f5d76e" title="Colour of selection">
+  <button id="bCurve" title="Toggle curved/straight (selected connection)">Curve</button>
+  <button id="bFocus" title="Dim everything not connected to the selection">Focus story</button>
+  <button id="bPng">PNG</button><button id="bExp">Export</button><button id="bImp">Import</button>
+  <input id="impf" type="file" accept=".json" hidden>
+  <span id="status">Saved</span>
+</header>
+<nav id="tools"></nav>
+<canvas id="cv"></canvas>
+<div id="drop">Drop images to add them to the canvas</div>
+<div id="toast"></div>
+<div id="lb" hidden><div class="card"><img id="lbImg"><div class="f">
+  <label>Shot type<select id="lbShot"><option value="">—</option><option>Establishing</option><option>Wide</option><option>Medium</option><option>Close-up</option><option>Insert</option><option>Transition</option></select></label>
+  <label>Scene description / notes<textarea id="lbNotes" rows="5"></textarea></label>
+  <label>Tags, characters, locations (comma separated)<input id="lbTags"></label>
+  <button id="lbClose" class="primary">Done</button></div></div></div>
+<script src="app.js"></script></body></html>
